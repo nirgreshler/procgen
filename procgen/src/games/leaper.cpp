@@ -126,22 +126,27 @@ class LeaperGame : public BasicAbstractGame {
 
         agent->y = agent->ry;
 
-        float min_car_speed = 0.05f;
-        float max_car_speed = 0.2f;
-        float min_log_speed = 0.05f;
-        float max_log_speed = 0.1f;
+        float min_car_speed = 0.1f;
+        float max_car_speed = min_car_speed;
+        float min_log_speed = 0.08f;
+        float max_log_speed = min_log_speed;
 
-        if (options.distribution_mode == EasyMode) {
-            min_car_speed = 0.03f;
-            max_car_speed = 0.12f;
-            min_log_speed = 0.025f;
-            max_log_speed = 0.075f;
-        } else if (options.distribution_mode == ExtremeMode) {
-            min_car_speed = 0.1f;
-            max_car_speed = 0.3f;
-            min_log_speed = 0.1f;
-            max_log_speed = 0.2f;
-        }
+        // float min_car_speed = 0.05f;
+        // float max_car_speed = 0.2f;
+        // float min_log_speed = 0.05f;
+        // float max_log_speed = 0.1f;
+
+        // if (options.distribution_mode == EasyMode) {
+        //     min_car_speed = 0.03f;
+        //     max_car_speed = 0.12f;
+        //     min_log_speed = 0.025f;
+        //     max_log_speed = 0.075f;
+        // } else if (options.distribution_mode == ExtremeMode) {
+        //     min_car_speed = 0.1f;
+        //     max_car_speed = 0.3f;
+        //     min_log_speed = 0.1f;
+        //     max_log_speed = 0.2f;
+        // }
 
         // road
         bottom_road_y = choose_extra_space() + 1;
