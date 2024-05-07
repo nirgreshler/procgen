@@ -66,6 +66,12 @@ class LeaperGame : public BasicAbstractGame {
         }
     }
 
+    void observe() override {
+        Game::observe();
+        *(int32_t *)(info_bufs[info_name_to_offset.at("steps_to_goal")]) = goal_y - 1;
+        *(int32_t *)(info_bufs[info_name_to_offset.at("agent_y")]) = agent->y;
+    }
+
     float get_tile_aspect_ratio(const std::shared_ptr<Entity> &ent) override {
         if (ent->type == FINISH_LINE) {
             return 1;
