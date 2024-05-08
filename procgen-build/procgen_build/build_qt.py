@@ -99,7 +99,7 @@ def build_qt(output_dir):
         "-no-openssl",
         "-no-dbus",
         "-no-opengl",
-        "-no-xcb",
+        # "-no-xcb",
         "-no-libjpeg",
         "-no-ico",
         "-no-gif",
